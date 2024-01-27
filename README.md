@@ -8,6 +8,12 @@ Large language models generate tokens (chunks of text) one at a time. Given text
 
 ![Funny picture: dog on a train quickly laying tracks in front of it. That's kind of how LLMs generate tokens.](dog-train-llm-next-word.gif ".mx-auto .d-block")
 
+<!--
+
+Image from [Andrej Karpathy's Intro to Large Language Models](https://www.youtube.com/watch?v=zjkBMFhNj_g) via [Lisa Becker](https://www.linkedin.com/posts/becker-lisa_llms-dont-plan-out-the-text-theyre-generating-activity-7138508006106853376-Oo4P/)
+
+-->
+
 Each token has an associated probability. For example, when prompted **Suggest 4 wrong and 1 correct answer to "What is the Capital of France"**, GPT 3.5 suggests:
 
 <!-- use :ignore :target=llmviz to identify which links to render as an LLMViz -->
