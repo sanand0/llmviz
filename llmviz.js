@@ -1,34 +1,41 @@
 /* globals bootstrap */
-import { scaleLinear } from "https://cdn.skypack.dev/d3-scale@4";
+import { scaleLinear } from "d3-scale";
+import { pc } from "./node_modules/@gramex/ui/dist/format.js";
 
-// const data = await fetch("data/program-vowels.json").then((r) => r.json());
-const data = await fetch("data/cannibalism.json").then((r) => r.json());
-const $output = document.getElementById("output");
-const color = scaleLinear().domain([0, 5]).range(["white", "orange"]);
+export function llmviz(target, data) {
+  const color = scaleLinear().domain([0, 2]).range(["white", "orange"]);
 
-data.choices[0].logprobs.content.forEach(({ token, logprob }, i) => {
-  $output.insertAdjacentHTML(
-    "beforeend",
-    /* html */ `<span
-        style="background-color:${color(-logprob)}"
-        data-index="${i}"
-        data-bs-toggle="tooltip">${token}</span>`,
-  );
-});
-new bootstrap.Popover("#output", {
-  selector: '[data-bs-toggle="tooltip"]',
-  customClass: "logprob-alternatives",
-  html: true,
-  sanitize: false,
-  trigger: "hover focus",
-  placement: "top",
-  content: (el) =>
-    data.choices[0].logprobs.content[+el.dataset.index].top_logprobs
-      .map(
-        ({ token, logprob }) =>
-          `<div class="text-start px-2" style="color:#000;background-color:${color(
+  target.innerHTML = data.choices[0].logprobs.content
+    .map(
+      ({ token, logprob, top_logprobs }, i) => /* html */ `<span
+          style="background-color:${color(
             -logprob,
-          )}">${token}</div>`,
-      )
-      .join(""),
-});
+          )};outline:1px solid rgba(0,0,0,0.1);"
+          data-index="${i}"
+          data-bs-toggle="popover"
+          data-index="${i}"
+          data-bs-content="${escape(
+            top_logprobs
+              .map(
+                ({ token, logprob }) =>
+                  `<div class="text-start px-2"  style="color:#000;background-color:${color(
+                    -logprob,
+                  )}">${token} (${pc(Math.exp(logprob))})</div>`,
+              )
+              .join("\n"),
+          )}">${token}</span>`,
+    )
+    .join("");
+  if (bootstrap)
+    bootstrap.Popover.getOrCreateInstance("body", {
+      selector: '[data-bs-toggle="popover"]',
+      customClass: "logprob-alternatives",
+      html: true,
+      sanitize: false,
+      trigger: "hover focus",
+      placement: "top",
+    });
+}
+
+const escape = (s) =>
+  s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/"/g, "&quot;");

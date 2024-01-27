@@ -1,6 +1,13 @@
 {
   "devDependencies": {
     "eslint-plugin-html": "^7.1.0",
-    "prettier": "^3.2.4"
+    "prettier": "^3.0"
+  },
+  "dependencies": {
+    "@gramex/ui": "^0.3.0",
+    "bootstrap": "^5.3.2",
+    "d3-scale": "^4.0.2",
+    "docsify": "^4.13.1",
+    "docsify-copy-code": "^3.0.0"
   }
 }

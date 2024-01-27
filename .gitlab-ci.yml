@@ -9,4 +9,5 @@ deploy:
     SERVER: gramener.com
     URL: llmviz
     VERSION: static
-    # SETUP: npm install
+    SETUP: npm install
+    CORS: enabled
