@@ -27,29 +27,7 @@
       }
     }
   </script>
-  <script type="module">
-    import { llmviz } from "./llmviz.js";
-    window.$docsify = {
-      auto2top: true,
-      name: 'Index',
-      themeColor: 'red',
-      plugins: [
-        function(hook) {
-          hook.ready(function () {
-            // Render any JSON with a specific class via LLMViz. Append link to embed page.
-            document.querySelectorAll('a[target="llmviz"]').forEach(async (link) => {
-              console.log(link);
-              const data = await fetch(link.href).then(r => r.json());
-              const target = document.createElement('pre');
-              target.style.whiteSpace = 'pre-wrap';
-              link.replaceWith(target);
-              llmviz(target, data)
-            })
-          })
-        }
-      ]
-    };
- </script>
+  <script type="module" src="script.js"></script>
   <script src="node_modules/docsify/lib/docsify.min.js"></script>
   <script src="node_modules/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
 </body>

@@ -11,3 +11,6 @@ deploy:
     VERSION: static
     SETUP: npm install
     CORS: enabled
+  environment:
+    name: production
+    url: https://gramener.com/llmviz/
