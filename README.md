@@ -6,7 +6,7 @@ Large language models generate tokens (chunks of text) one at a time. Given text
 2. Picks one randomly with a high probability
 3. Repeats
 
-![Funny picture: dog on a train quickly laying tracks in front of it. That's kind of how LLMs generate tokens.](dog-train-llm-next-word.gif ".mx-auto .d-block")
+![Funny picture: dog on a train quickly laying tracks in front of it. That's kind of how LLMs generate tokens.](dog-laying-tracks-like-llm-word-by-word.gif ".mx-auto .d-block")
 
 <!--
 
