@@ -19,7 +19,8 @@ document.querySelector("form").addEventListener("submit", async (e) => {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        Authorization: `Bearer ${document.querySelector("#key").value}`,
+        "Cache-Control": "no-cache",
+        "Authorization": `Bearer ${document.querySelector("#key").value}`,
       },
       credentials: "include",
       body: JSON.stringify({
