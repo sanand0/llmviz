@@ -74,6 +74,17 @@ When `temperature=2`, there's less difference between ` London` and ` Paris`. `t
 
 The lower the temperature, the more likely the first token is picked. That's good for accuracy and bad for creativity.
 
+**NOTE**: zero temperature does _not_ mean zero hallucinations. It simply means the most likely token is picked. It's still possible that the most likely token is wrong.
+
+## Choose based on intent
+
+In general, you want:
+
+- lower `temperature` to generate what most people agree with.
+- higher `temperature` for creative ideas -- that people may not have thought of
+
+For example, [Bing chat](https://www.bing.com/chat) offers "More creative", "More balanced" and "More precise" modes by setting high, medium and low temperatures.
+
 # Low probabilities signal hallucinations
 
 The first line, `1. Wrong: Paris` is clearly incorrect. It is notable that it had a large (negative) logprob.
@@ -95,7 +106,7 @@ The LLM was not confident about that and hallucinated.
 
 Note that it wasn't confident about `1. Green` (and made a mistake). But it wasn't confident about `2. White` either (which wasn't a mistake.)
 
-Higher logprobs don't necessarily mean hallucinations. They're just a place to look.
+**NOTE**: Higher logprobs don't necessarily mean hallucinations. They're just a place to start examining.
 
 # Try it out
 
