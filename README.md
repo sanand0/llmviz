@@ -125,3 +125,15 @@ curl https://api.openai.com/v1/chat/completions \
     ]
   }' > response.json
 ```
+
+# Setup
+
+This app is hosted at [gramener.com/llmviz/](https://gramener.com/llmviz/). To run it locally,
+clone the repo and run:
+
+```shell
+git clone https://code.gramener.com/s.anand/llmviz.git  # You need access
+cd llmviz
+npm install
+npx -y http-server
+```
