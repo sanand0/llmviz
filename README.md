@@ -108,6 +108,23 @@ Note that it wasn't confident about `1. Green` (and made a mistake). But it wasn
 
 **NOTE**: Higher logprobs don't necessarily mean hallucinations. They're just a place to start examining.
 
+# But not all high probabilities are real
+
+Just because a token has a high probability doesn't mean it's correct. For example, here are 2 questions answered with `temperature=0`:
+
+**In what episode of Friends did Joey eat too many marshmallows?**
+
+[See the response](data/friends-marshmallows.json ":ignore :target=llmviz")
+
+**In which Sherlock Holmes short story did Sherlock break someone's nose?**
+
+[See the response](data/sherlock-holmes.json ":ignore :target=llmviz")
+
+In both cases, the top probabilities are chosen at every point. The actual probabilities are fairly high.
+So the LLM is confident -- but the answeres are wrong. Joey never ate too many marshmallows and Sherlock never broke anyone's nose.
+
+So high probabilities don't necessarily mean the LLM is correct. They just mean the LLM is confident.
+
 # Try it out
 
 [Try it out](app.html ":include height=600px")
@@ -137,9 +154,13 @@ curl https://api.openai.com/v1/chat/completions \
   }' > response.json
 ```
 
+# Thanks
+
+Thanks to [Dan Becker](https://www.linkedin.com/in/dansbecker/) and [Kripa Rajshekhar](https://www.linkedin.com/in/reliable-ai/) for suggestions.
+
 # Setup
 
-This app is hosted at [gramener.com/llmviz/](https://gramener.com/llmviz/). To run it locally,
+This app is hosted at [gramener.com/llmviz/](https://gramener.com/llmviz/ ":target=_blank"). To run it locally,
 clone the repo and run:
 
 ```shell
