@@ -156,11 +156,11 @@ curl https://api.openai.com/v1/chat/completions \
 
 # Thanks
 
-Thanks to [Dan Becker](https://www.linkedin.com/in/dansbecker/) and [Kripa Rajshekhar](https://www.linkedin.com/in/reliable-ai/) for suggestions.
+Thanks to [Dan Becker](https://www.linkedin.com/in/dansbecker/ ":ignore :target=_blank") and [Kripa Rajshekhar](https://www.linkedin.com/in/reliable-ai/ ":ignore :target=_blank") for suggestions.
 
 # Setup
 
-This app is hosted at [gramener.com/llmviz/](https://gramener.com/llmviz/ ":target=_blank"). To run it locally,
+This app is hosted at [gramener.com/llmviz/](https://gramener.com/llmviz/ ":ignore :target=_blank"). To run it locally,
 clone the repo and run:
 
 ```shell
