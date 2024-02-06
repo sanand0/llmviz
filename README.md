@@ -10,6 +10,8 @@ Large language models generate tokens (chunks of text) one at a time. Given text
 
 ![Funny picture: dog on a train quickly laying tracks in front of it. That's kind of how LLMs generate tokens.](dog-laying-tracks-like-llm-word-by-word.gif ".mx-auto .d-block")
 
+[Here's a more detailed visual explanation from the Financial Times.](https://ig.ft.com/generative-ai/)
+
 <!--
 
 Image from [Andrej Karpathy's Intro to Large Language Models](https://www.youtube.com/watch?v=zjkBMFhNj_g) via [Lisa Becker](https://www.linkedin.com/posts/becker-lisa_llms-dont-plan-out-the-text-theyre-generating-activity-7138508006106853376-Oo4P/)
