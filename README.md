@@ -162,7 +162,8 @@ Thanks to [Dan Becker](https://www.linkedin.com/in/dansbecker/ ":ignore :target=
 
 # Setup
 
-This app is hosted at [gramener.com/llmviz/](https://gramener.com/llmviz/ ":ignore :target=_blank"). To run it locally,
+The [source code](https://code.gramener.com/s.anand/llmviz/ ":ignore :target=_blank") is hosted at
+[gramener.com/llmviz/](https://gramener.com/llmviz/ ":ignore :target=_blank"). To run it locally,
 clone the repo and run:
 
 ```shell

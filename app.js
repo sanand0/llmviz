@@ -14,13 +14,16 @@ document.querySelector("form").addEventListener("submit", async (e) => {
   $output.innerHTML = `<div class="spinner-border" role="status"></div>`;
 
   let result;
+  let key = document.querySelector("#key").value;
+  // OpenAI keys start with sk_. LLMProxy keys don't, and require a :app-name at the end
+  if (!key.startsWith("sk_")) key + ":llmviz";
   try {
     const response = await fetch("https://gramener.com/llmproxy/v1/chat/completions", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
         "Cache-Control": "no-cache",
-        Authorization: `Bearer ${document.querySelector("#key").value}`,
+        Authorization: `Bearer ${key}`,
       },
       credentials: "include",
       body: JSON.stringify({
