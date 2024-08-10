@@ -1,11 +1,11 @@
 import { llmviz } from "./llmviz.js";
 
 const $output = document.querySelector("#output");
-const num3 = new Intl.NumberFormat("en-US", {
+const num1 = new Intl.NumberFormat("en-US", {
   style: "decimal",
   grouping: "always",
-  maximumFractionDigits: 3,
-  minimumFractionDigits: 3,
+  maximumFractionDigits: 1,
+  minimumFractionDigits: 1,
 });
 
 document.querySelector("form").addEventListener("submit", async (e) => {
@@ -27,7 +27,7 @@ document.querySelector("form").addEventListener("submit", async (e) => {
       },
       credentials: "include",
       body: JSON.stringify({
-        model: "gpt-3.5-turbo",
+        model: "gpt-4o-mini",
         messages: [
           { role: "system", content: document.querySelector("#system").value },
           { role: "user", content: document.querySelector("#user").value },
@@ -46,7 +46,7 @@ document.querySelector("form").addEventListener("submit", async (e) => {
   llmviz($output, result);
 });
 
-const showRangeValue = (el) => (el.parentElement.querySelector(".range-value").textContent = num3.format(+el.value));
+const showRangeValue = (el) => (el.parentElement.querySelector(".range-value").textContent = num1.format(+el.value));
 for (const el of document.querySelectorAll(".form-range")) {
   showRangeValue(el);
   el.addEventListener("input", () => showRangeValue(el));
