@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>LLM Visualization</title>
-  <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link href="//cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <style>
     .logprob-alternatives {
       --bs-popover-body-padding-x: 0;
@@ -13,15 +14,18 @@
       --bs-popover-border-radius: 0;
       --bs-popover-border-color: #888;
     }
+
     .range-value {
       font-family: var(--vs-bs-font-monospace);
       font-weight: normal;
     }
+
     #output {
       white-space: pre-wrap;
     }
   </style>
 </head>
+
 <body>
   <div class="container">
     <form>
@@ -63,21 +67,8 @@
 
   </div>
 
-  <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-  <script type="importmap">
-    {
-      "imports": {
-        "d3-array": "./node_modules/d3-array/src/index.js",
-        "d3-color": "./node_modules/d3-color/src/index.js",
-        "d3-format": "./node_modules/d3-format/src/index.js",
-        "d3-interpolate": "./node_modules/d3-interpolate/src/index.js",
-        "d3-scale": "./node_modules/d3-scale/src/index.js",
-        "d3-time": "./node_modules/d3-time/src/index.js",
-        "d3-time-format": "./node_modules/d3-time-format/src/index.js",
-        "internmap": "./node_modules/internmap/src/index.js"
-      }
-    }
-  </script>
+  <script src="//cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   <script type="module" src="app.js"></script>
 </body>
+
 </html>

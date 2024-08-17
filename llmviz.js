@@ -1,6 +1,6 @@
 /* globals bootstrap */
-import { scaleLinear } from "d3-scale";
-import { pc } from "./node_modules/@gramex/ui/dist/format.js";
+import { scaleLinear } from "https://cdn.jsdelivr.net/npm/d3@7/+esm";
+import { pc } from "https://cdn.jsdelivr.net/npm/@gramex/ui/dist/format.js";
 
 export function llmviz(target, data, { summary } = {}) {
   const color = scaleLinear().domain([0, 2]).range(["white", "orange"]);
