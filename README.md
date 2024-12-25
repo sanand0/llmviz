@@ -162,12 +162,12 @@ Thanks to [Dan Becker](https://www.linkedin.com/in/dansbecker/ ":ignore :target=
 
 # Setup
 
-The [source code](https://code.gramener.com/s.anand/llmviz/ ":ignore :target=_blank") is hosted at
-[gramener.com/llmviz/](https://gramener.com/llmviz/ ":ignore :target=_blank"). To run it locally,
+The [source code](https://github.com/sanand0/llmviz/ ":ignore :target=_blank") is hosted at
+[sanand0.github.com/llmviz/](https://sanand0.github.com/llmviz/ ":ignore :target=_blank"). To run it locally,
 clone the repo and run:
 
 ```shell
-git clone https://code.gramener.com/s.anand/llmviz.git  # You need access
+git clone https://github.com/sanand0/llmviz.git  # You need access
 cd llmviz
 npm install
 npx -y http-server

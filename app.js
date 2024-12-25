@@ -18,7 +18,7 @@ document.querySelector("form").addEventListener("submit", async (e) => {
   // OpenAI keys start with sk_. LLMProxy keys don't, and require a :app-name at the end
   if (!key.startsWith("sk_")) key += ":llmviz";
   try {
-    const response = await fetch("https://gramener.com/llmproxy/v1/chat/completions", {
+    const response = await fetch("https://api.openai.com/v1/chat/completions", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
