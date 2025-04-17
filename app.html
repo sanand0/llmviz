@@ -29,34 +29,20 @@
 <body>
   <div class="container">
     <form>
-      <div class="row my-3">
-        <div class="col-12 col-sm-6">
-          <label for="system" class="form-label fw-bold text-uppercase">System message</label>
-          <input class="form-control" type="text" name="system" id="system" value="You are a helpful assistant." required>
-        </div>
-        <div class="col-12 col-sm-6">
-          <label for="user" class="form-label fw-bold text-uppercase">User message</label>
-          <input class="form-control" type="text" name="user" id="user" value="Write a haiku about penguins." required>
-        </div>
+      <div class="my-3">
+        <label for="user" class="form-label fw-bold text-uppercase">User message</label>
+        <input class="form-control" type="text" name="user" id="user" value="Write a haiku about penguins." required>
       </div>
-      <div class="row my-3">
-        <div class="col-12 col-sm-6">
+      <div class="row align-items-end my-3">
+        <div class="col-12 col-sm-5">
           <label for="system" class="form-label fw-bold text-uppercase d-flex justify-content-between"><span>Temperature</span><span class="range-value"></span></label>
           <input class="form-range" type="range" min="0" max="2" step="0.1" value="1" name="temperature" id="temperature" required>
         </div>
-        <div class="col-12 col-sm-6">
+        <div class="col-12 col-sm-5">
           <label for="user" class="form-label fw-bold text-uppercase d-flex justify-content-between"><span>Top P</span><span class="range-value"></span></label>
           <input class="form-range" type="range" min="0" max="1" step="0.1" value="1" name="top_p" id="top_p" required>
         </div>
-      </div>
-      <div class="row align-items-end">
-        <div class="col-8 col-sm-9 col-md-10">
-          <label for="key" class="form-label fw-bold text-uppercase">
-            <a href="https://platform.openai.com/api-keys" target="_blank">OpenAI API key</a>
-          </label>
-          <input class="form-control" type="text" name="key" id="key" required>
-        </div>
-        <div class="col-4 col-sm-3 col-md-2">
+        <div class="col-12 col-sm-2">
           <button class="btn btn-primary w-100" type="submit">Send</button>
         </div>
       </div>
