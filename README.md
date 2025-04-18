@@ -138,21 +138,12 @@ curl https://api.openai.com/v1/chat/completions \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer $OPENAI_API_KEY" \
   -d '{
-    "model": "gpt-3.5-turbo",
+    "model": "openai/gpt-4.1-nano",
     "logprobs": true,
     "top_logprobs": 5,
     "temperature": 1.0,
     "top_p": 1,
-    "messages": [
-      {
-        "role": "system",
-        "content": "You are a professor drafting answers to multiple choice questions."
-      },
-      {
-        "role": "user",
-        "content": "Suggest 4 wrong and 1 correct answer to \"What color is present in a rainbow?\""
-      }
-    ]
+    "messages": [{ "role": "user", "content": "..." }],
   }' > response.json
 ```
 
@@ -167,7 +158,7 @@ The [source code](https://github.com/sanand0/llmviz/ ":ignore :target=_blank") i
 clone the repo and run:
 
 ```shell
-git clone https://github.com/sanand0/llmviz.git  # You need access
+git clone https://github.com/sanand0/llmviz.git
 cd llmviz
 npm install
 npx -y http-server
